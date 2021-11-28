@@ -38,12 +38,12 @@
 
 	<select id="booksearchauthor"
 		resultType="com.ezen.tiles.bookDTO">
-		SELECT * FROM BOOK WHERE BOOKAUTHOR = #{param1}
+		SELECT * FROM BOOK WHERE BOOKAUTHOR LIKE '%'||#{param1}||'%'
 	</select>
 
 	<select id="booksearchtitle" resultType="com.ezen.tiles.bookDTO">
 		SELECT * FROM BOOK WHERE
-		BOOKTITLE = #{param1}
+		BOOKTITLE LIKE '%'||#{param1}||'%'
 	</select>
 
 	<select id="deabanlist" resultType="com.ezen.tiles.bookDTO">
