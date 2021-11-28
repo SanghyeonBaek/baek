@@ -36,7 +36,7 @@ table {
 			<b>검색</b>
 		</legend>
 		<form action="booksearch" method="post">
-			<div id="tablesize">
+			
 				<table align="center">
 					<tr>
 						<td>
@@ -57,39 +57,29 @@ table {
 					</tr>
 				</table>
 		</form>
+<div id="tablesize">
+		<table id="tableA" border="1" align="center" width="1200">
+			<tr>
+				<th width="10%">도서번호</th>
+				<th width="40%">도서명</th>
+				<th width="10%">저자</th>
+				<th width="10%">출판사</th>
+				<th width="10%">보유재고</th>
+				<th width="10%">카테고리</th>
+				<th width="10%">비고</th>
+			</tr>
 
-		<table id="tableA" border="1" align="center">
 			<c:forEach items="${output }" var="my">
 				<tr>
-					<td width="10%">도서번호</td>
-					<td width="20%">${my.booknumber }</td>
-					<td width="10%">보유재고</td>
-					<td width="20%">${my.bookstock }</td>
-					<td width="10%">카테고리</td>
-					<td width="30%">${my.bookcate }</td>
-				</tr>
-				
-				<tr>
-					<td>도서명</td>
-					<td colspan="3">${my.booktitle }</td>
-					<td>저 자</td>
+					<td>${my.booknumber }</td>
+					<td><a href="bookcontent?booknumber=${my.booknumber}">${my.booktitle }</a></td>
 					<td>${my.bookauthor }</td>
-				</tr>
-				
-				<tr>
-					<td width="10%">표지</td>
-					
-		     		<c:set var="aa" value="${my.booktitle }" />
-			      	<td colspan="5">
-			    	<c:if test="${my.booktitle eq aa }">
-						<img src="./image/${my.booktitle }.jpg" width="200" height="150">
-					</c:if>
-			        </td>
-				</tr>
-				
-				<tr>
-					<td>출판사</td>
-					<td colspan="5" align="left">${my.bookpublisher }</td>
+					<td>${my.bookpublisher }</td>
+					<td>${my.bookstock }</td>
+					<td>${my.bookcate }</td>
+					<td><input type="button" value="삭제"
+						onclick="location.href='bookdelete?booknumber=${my.booknumber}'"
+					></td>
 				</tr>
 			</c:forEach>
 		</table>

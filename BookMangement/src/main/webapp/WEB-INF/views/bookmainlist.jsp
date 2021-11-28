@@ -36,7 +36,7 @@ table {
 			<b>전체도서 조회</b>
 		</legend>
 		<form action="bookmainlist" method="post">
-			<div id="tablesize">
+			
 				<table align="center">
 					<tr>
 						<td>정렬기준:&emsp;</td>
@@ -60,7 +60,7 @@ table {
 				</tr>
 			</table>
 		</form>
-
+<div id="tablesize">
 		<table id="tableA" border="1" align="center" width="1200">
 			<tr>
 				<th width="10%">도서번호</th>

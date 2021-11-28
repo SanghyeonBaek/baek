@@ -200,12 +200,12 @@ public class HomeController {
 		bookinter dao = sqlSession.getMapper(bookinter.class);
 		ModelAndView mav = new ModelAndView();
 
-		if (list.equals("ì¹´í…Œì •ë ¬")) {
+		if (list.equals("Ä«Å×Á¤·Ä")) {
 			ArrayList<bookDTO> out1 = dao.outcate();
 			mav.addObject("output", out1);
 		}
 
-		if (list.equals("ë²ˆí˜¸ì •ë ¬")) {
+		if (list.equals("¹øÈ£Á¤·Ä")) {
 			ArrayList<bookDTO> out2 = dao.outnumber();
 			mav.addObject("output", out2);
 		}
