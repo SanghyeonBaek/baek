@@ -1,6 +1,14 @@
 package com.ezen.tiles;
 
 public class RentDTO {
+//  booknumber: 도서번호
+//  booktitle: 도서명
+//  bookauthor: 저자
+//  bookpublisher: 출판사
+// bookcate: 카테고리
+// rentdate: 대출일자
+// returndate: 반납일자
+
 	int booknumber;
 	String booktitle, bookauthor, bookpublisher, username, bookcate, rentdate, returndate;
 

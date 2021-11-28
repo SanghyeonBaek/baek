@@ -2,8 +2,10 @@ package com.ezen.tiles;
 
 public class UserDTO {
 
-	// rentable: ëŒ€ì¶œê°€ëŠ¥ê¶Œìˆ˜ (10ê¶Œì„)
-
+//  username: È¸¿ø¸í
+//  usertel: È¸¿øÀüÈ­¹øÈ£
+//  usermail: È¸¿øÀÌ¸ŞÀÏ
+//  rentable: ´ëÃâ°¡´É±Ç¼ö (default:10)
 	int userno;
 	String username, usertel, usermail;
 	String rentable;
